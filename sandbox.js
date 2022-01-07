@@ -1,42 +1,40 @@
-// // dates & times
+const getTodos = (resource) => {
 
-// const now1 = new Date();
-// const before1 = new Date(' May 15 2009 1:30:55');
-
-// // console.log(now1);
-// // console.log(now1.getFullYear);
-
-
-// //timestamps
-
-// console.log('timestamp:'+ now1.getTime());
-
-// // comparing timestamps
-
-// //console.log('timestamp:'+ now.getTime(), before.getTime());
-
-// const diff = now1.getTime() - before1.getTime();
-// console.log(diff)
-
-
-// Building a Digital Clock
-
-const clock = document.querySelector('.clock');
-
-const tick = () => {
-    const now = new Date();
-    const h = now.getHours();
-    const m = now.getMinutes();
-    const s = now.getSeconds();
+    return new Promise( (resolve, reject) => {
+        const request = new XMLHttpRequest();
     
-    const html = `
-    <span>${h > 12 ? h - 12: h}</span> :
-    <span>${m}</span> :
-    <span>${s}</span>
-    `;
-
-    clock.innerHTML = html
-
+        request.addEventListener('readystatechange', () => {
+           // console.log(request, request.readyState);
+        
+           if(request.readyState === 4 && request.status === 200) {
+               const data = JSON.parse(request.responseText)
+               resolve(data);
+           }else if( request.readyState === 4) {
+               reject('error getting resource');
+           }
+        });
+        
+        request.open('GET', resource);
+        request.send();
+    });
 };
 
-setInterval(tick, 1000);
+
+//
+
+
+getTodos('todos/emily.json').then(data => {
+    console.log('promise 1 resolved:' ,data);
+    return getTodos('todos/todos.json');
+}).then(data => {
+    console.log('promise 2 resolved', data);
+    return getTodos('todos/brody.json');
+}).then(data => {
+    console.log('promise 3 resoved', data)
+}).catch(err => {
+    console.log('promise rejected:' , err)
+})
+
+
+
+

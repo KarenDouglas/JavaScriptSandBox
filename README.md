@@ -1,7 +1,7 @@
-# JavaScriptSandBox
+# JavaScript SandBox
 
-# Topics Reviewed In SandBox
-## Array Methods
+## Topics Reviewed In SandBox
+### Array Methods
 - Method Chaining
 - Filter Method
 - Map Method
@@ -10,8 +10,11 @@
 - Sort Method
 
 
-## Dates & Times
+### Dates & Times
 - Date functions
 - Comparing TimeStamps
 - Building Digital Clock
 - date-fns Library
+
+###  Async Code
+- HTTP Requests
