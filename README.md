@@ -18,3 +18,8 @@
 
 ###  Async Code
 - HTTP Requests
+- Fetch API
+- Async Await
+
+### Node JS
+- Modules and Require
