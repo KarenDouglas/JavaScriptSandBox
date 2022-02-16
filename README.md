@@ -29,3 +29,5 @@
 - IP Addresses & Domains
 - Creating a Server
 - Localhost & Port Numbers
+- Request & Response Object
+- Returning HTML Pages
