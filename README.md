@@ -31,3 +31,5 @@
 - Localhost & Port Numbers
 - Request & Response Object
 - Returning HTML Pages
+- Basic Routing
+- Status Codes
