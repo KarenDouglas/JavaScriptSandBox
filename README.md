@@ -27,3 +27,5 @@
 - Streams and Buffer
 - Clients & Servers
 - IP Addresses & Domains
+- Creating a Server
+- Localhost & Port Numbers
