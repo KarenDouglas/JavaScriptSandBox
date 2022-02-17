@@ -33,3 +33,6 @@
 - Returning HTML Pages
 - Basic Routing
 - Status Codes
+- Redirects
+- 3rd Party Packages
+- Installing Packages Locally
