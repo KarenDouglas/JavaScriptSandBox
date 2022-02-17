@@ -1,6 +1,7 @@
 # JavaScript SandBox
 
 ## Topics Reviewed In SandBox
+
 ### Array Methods
 - Method Chaining
 - Filter Method
@@ -36,3 +37,4 @@
 - Redirects
 - 3rd Party Packages
 - Installing Packages Locally
+- Dependencies
