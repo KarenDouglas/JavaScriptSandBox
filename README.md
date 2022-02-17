@@ -1,6 +1,7 @@
 # JavaScript SandBox
 
 ## Topics Reviewed In SandBox
+
 ### Array Methods
 - Method Chaining
 - Filter Method
@@ -33,3 +34,9 @@
 - Returning HTML Pages
 - Basic Routing
 - Status Codes
+- Redirects
+- 3rd Party Packages
+- Installing Packages Locally
+- Dependencies
+- Creating an Express App
+
