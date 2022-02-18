@@ -38,6 +38,10 @@
 - 3rd Party Packages
 - Installing Packages Locally
 - Dependencies
-- Creating an Express App
-- Routing & HTML Pages with Express
 
+### Express 
+- Creating an Express App
+- Routing & HTML Pages 
+- Redirects and "use" Method 
+
+### EJS View Engine
