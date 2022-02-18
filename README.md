@@ -39,4 +39,5 @@
 - Installing Packages Locally
 - Dependencies
 - Creating an Express App
+- Routing & HTML Pages with Express
 
