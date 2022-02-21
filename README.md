@@ -45,3 +45,4 @@
 - Redirects and "use" Method 
 
 ### EJS View Engine
+- Passing Data into Views
