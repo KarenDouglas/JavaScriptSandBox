@@ -46,3 +46,4 @@
 
 ### EJS View Engine
 - Passing Data into Views
+- Partials
