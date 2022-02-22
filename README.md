@@ -49,3 +49,4 @@
 - Partials
 - Adding CSS
 - Middleware
+- using Next
