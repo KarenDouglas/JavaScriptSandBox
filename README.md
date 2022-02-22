@@ -51,3 +51,4 @@
 - Middleware
 - using Next
 - 3rd-party Middleware
+- Static Files
