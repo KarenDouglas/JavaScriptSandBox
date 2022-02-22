@@ -50,3 +50,4 @@
 - Adding CSS
 - Middleware
 - using Next
+- 3rd-party Middleware
