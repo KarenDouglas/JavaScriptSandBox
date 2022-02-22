@@ -47,3 +47,5 @@
 ### EJS View Engine
 - Passing Data into Views
 - Partials
+- Adding CSS
+- Middleware
