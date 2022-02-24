@@ -57,3 +57,5 @@
 - Setup with Atlas
 - Mongoose
 - Getting & Saving Data
+- Outputting Documents
+
