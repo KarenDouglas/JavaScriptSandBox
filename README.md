@@ -52,3 +52,8 @@
 - using Next
 - 3rd-party Middleware
 - Static Files
+
+### Mongodb 
+- Setup with Atlas
+- Mongoose
+- Getting & Saving Data
