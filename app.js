@@ -26,19 +26,23 @@ app.set('view engine', 'ejs');
 
 // middleware & static files
 app.use(express.static('public'));
+// middleware to make post requests
+// it takes all of the url encoded data of the form and passes it to the post request
+app.use(express.urlencoded({extended: true}));
 app.use(morgan('dev'));
 
 //mongoose & mongodb, sandbox routes
 
 //  Routes
 app.get('/', (req, res) => {
-    res.redirect('/blogs');
+    res.redirect('blogs');
  
 }); 
 app.get('/about', (req, res) => {
 
     res.render('about', {title: 'About'});
 });
+
 // blog routes
 app.get('/blogs', (req, res) => {
     Blog.find().sort({createdAt: -1})
@@ -49,9 +53,19 @@ app.get('/blogs', (req, res) => {
     
        
 });
-app.get('/blogs/create', (req, res) =>{
-    res.render('create', {title: 'Create New Blog'});
+
+app.post('/blogs', (req, res) => {
+   const blog = new Blog(req.body)
+   blog.save()
+   .then((result) => {
+       res.redirect('/blogs')
+   })
+   .catch(err => console.log(err))
 })
+app.get('/create', (req, res) => {
+
+    res.render('create', {title: 'Create New Blog'});
+});
 
 // 404 Page
 app.use((req,res) => {

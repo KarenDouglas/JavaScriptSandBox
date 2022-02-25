@@ -58,4 +58,6 @@
 - Mongoose
 - Getting & Saving Data
 - Outputting Documents
+- Request Types
+- Post Request
 
