@@ -61,4 +61,6 @@
 - Request Types
 - Post Requests
 - Route Parameters
+- Delete Request
+- Express Router & MVC
 
