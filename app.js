@@ -26,12 +26,13 @@ app.set('view engine', 'ejs');
 
 // middleware & static files
 app.use(express.static('public'));
+
 // middleware to make post requests
 // it takes all of the url encoded data of the form and passes it to the post request
 app.use(express.urlencoded({extended: true}));
 app.use(morgan('dev'));
 
-//mongoose & mongodb, sandbox routes
+
 
 //  Routes
 app.get('/', (req, res) => {
@@ -62,7 +63,17 @@ app.post('/blogs', (req, res) => {
    })
    .catch(err => console.log(err))
 })
-app.get('/create', (req, res) => {
+
+app.get('/blogs/:id', (req, res) => {
+    const id = req.params.id
+    console.log(id)
+    Blog.findById(id)
+    .then((result) => {
+        res.render('details', {blog: result, title: 'Blog Details'})
+    })
+    .catch(err => console.log(err))
+})
+app.get('/blogs/create', (req, res) => {
 
     res.render('create', {title: 'Create New Blog'});
 });
