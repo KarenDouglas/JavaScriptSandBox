@@ -2,6 +2,7 @@ const express = require('express');
 const { render } = require('express/lib/response');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
+const dbURI = require('./hideme')
 
 const blogRoutes = require('./routes/blogRoutes');
 
@@ -10,7 +11,6 @@ const app = express();
 
 //connect to mongodb
 
-const dbURI ='mongodb+srv://master:tim1Mpwc@nodetuts.vxfit.mongodb.net/node-tuts?retryWrites=true&w=majority'
 mongoose.connect(dbURI)
     .then((result) => {
         app.listen(3000);
